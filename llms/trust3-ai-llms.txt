@@ -1,0 +1,28 @@
+# Trust3 AI
+
+> Trust3 AI is the agent-first trust layer for the enterprise: it discovers every AI agent running across platforms like Databricks and Microsoft Copilot Studio, scores each one with a 1.0-10.0 Trust Score, evaluates agents against policy packs (NERC CIP, EU AI Act, FERC, internal AI governance), and gates new agents through approval workflows. Founded by the creators of Apache Ranger and Apache Atlas (the team behind Privacera), backed by Insight Partners, Sapphire Ventures, Battery Ventures, Accel, Cervin Ventures, and Point72 Ventures.
+
+Programmatic access is through scoped API keys: AI Assets Collectors authenticate to the Trust3 API server (the public AI Governance API edge) with a Trust3 API key, and external AI clients connect over the Model Context Protocol using an MCP (read) scoped key with the x-trust3ai-key header.
+
+## Platform
+
+- [Platform overview](https://trust3.ai/platform/): Data Access, Agent Discovery, Agent Observability, Agent Security, MCP Security, A2A Security
+- [Documentation](https://docs.trust3ai.com/): Trust3 AI Governance docs (get started, platform concepts, how-to guides, AI Assets Collector)
+- [Quick start](https://docs.trust3ai.com/get-started/quick-start.html): First steps with Trust3 AI Governance
+- [Control plane and data plane](https://docs.trust3ai.com/platform-concepts/control-data-plane.html): Where the Trust3 API server and collectors run; API key flow
+- [MCP configuration](https://docs.trust3ai.com/how-to-guides/mcp-configuration.html): Connect Cursor, Claude Desktop, or custom agents to the hosted MCP server at https://api.na.trust3ai.com/mcp
+- [Release notes](https://docs.trust3ai.com/resources/release-notes.html): Dated platform releases (current 9.2.25.1)
+- [SSO / user management](https://docs.trust3ai.com/get-started/user-management/sso/): SAML SSO for Azure AD, Okta, OneLogin, Ping Identity
+
+## Packages
+
+- [trust3-client on PyPI](https://pypi.org/project/trust3-client/): Official Python client for integrating Trust3 AI governance into GenAI (LangChain) applications
+
+## Company
+
+- [About](https://trust3.ai/about/): Founded by Balaji Ganesan, Don Bosco Durai, and Neeraj Sabharwal; $63.5M raised
+- [Blog / Insights](https://trust3.ai/blog/)
+- [FAQ](https://trust3.ai/faq/)
+- [Trust center](https://privacera.com/trust-center/): SOC 2 Type II attestation (Trust3 AI by Privacera)
+- [Terms](https://trust3.ai/terms/)
+- [Privacy policy](https://trust3.ai/privacy-policy/)

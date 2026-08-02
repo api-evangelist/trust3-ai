@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.trust3ai.com/resources/release-notes.html
+scheme: dated platform releases with build-style version numbers (9.x.y.z)
+current_version: 9.2.25.1
+entries:
+- version: 9.2.25.1
+  date: '2026-06-01'
+  breaking: false
+  highlights:
+  - Runtime on Kubernetes as a production deployment option for the AI Assets Collector (alongside Docker)
+  - Partially Managed (D2P) runtime creation with AWS or Azure as cloud provider, installed via published curl/wget and Helm steps
+  - Collector configuration in the portal (Databricks and/or Azure datasource values, Kubernetes settings) from Settings > Runtime > Collectors
+  - Unified Run Collector guide covering Docker (docker-compose.yml, .env) and Runtime on K8s
+- version: 9.2.17.2
+  date: '2026-04-11'
+  breaking: false
+  highlights:
+  - Multi-platform AI agent discovery (Databricks serving endpoints and Genie spaces, Microsoft Azure / Power Platform for Copilot Studio) with custom registrations
+  - Identity discovery and mapping, including ephemeral identities with parent linkage
+  - Unified dashboard for agent inventory across platforms with identity columns and policy posture
+  - GIA governance Q&A over inventory and identities
+  - Docker-based AI Assets Collector using AI_GOVERNANCE_API_KEY

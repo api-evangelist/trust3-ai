@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: searched
+probe: false
+url: https://privacera.com/trust-center/
+certifications:
+- SOC 2 Type II
+evidence:
+- source: https://privacera.com/trust-center/
+  keywords: [trust center, soc 2 type ii attestation, shared security model]
+  note: >-
+    Page banner states "Privacera is now Trust3 AI by Privacera"; Trust3 AI is
+    the agent-governance platform of Privacera (same company, founded by the
+    creators of Apache Ranger and Apache Atlas). The trust center describes the
+    SaaS shared-security model (control plane managed by the company, data
+    plane in the customer VPC) and states the platform "adheres to relevant
+    compliance frameworks and offers SOC 2 Type II attestation."

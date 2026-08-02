@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: https://pypi.org/project/trust3-client/
+packages:
+- language: python
+  registry: pypi
+  name: trust3-client
+  url: https://pypi.org/project/trust3-client/
+  install: pip install trust3-client
+  version: 1.0.0
+  official: true
+  author: Trust3 Team <support@trust3.ai>
+  description: >-
+    Python client library for integrating Trust3 AI governance and security
+    features into GenAI applications. Integrates Privacera AI Governance
+    (PAIG Shield) into LangChain projects; configured with an AI application
+    config API key from the PAIG/Trust3 server.
+notes: >-
+  Probed npm (trust3, trust3ai, @trust3/sdk, trust3iq-sdk: 404) and PyPI
+  (trust3, trust3ai, trust3-sdk: 404). trust3-client is the only first-party
+  package found; it is published by the Trust3 Team (support@trust3.ai).
+  The github.com/trust3ai org exists but has 0 public repos; the company's
+  open-source work (Apache Ranger/Atlas heritage, PAIG) lives under
+  github.com/privacera.

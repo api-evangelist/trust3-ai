@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.trust3ai.com/how-to-guides/mcp-configuration.html
+status: published
+server:
+  name: trust3ai-mcp-server
+  transport: http
+  transport_detail: streamable_http
+  url: https://api.na.trust3ai.com/mcp
+  probed: '2026-07-21'
+  probed_status: 401
+  probed_note: Endpoint is live and returns 401 without a scoped API key, as documented.
+authentication:
+  type: apiKey
+  header: x-trust3ai-key
+  scopes:
+  - MCP (read)
+  notes: >-
+    Scoped API key generated in the Trust3 console (Settings -> API Keys ->
+    Generate scoped key). MCP (read) is currently the only MCP scope and grants
+    read-only access to governance context (inventory, policies, trust scores).
+    Keys carry an expiry of 7/30/90 days, 1 year, or custom.
+docs: https://docs.trust3ai.com/how-to-guides/mcp-configuration.html
+capabilities:
+- Query the governed AI agent inventory from external MCP clients (Cursor, Claude Desktop, custom agents)
+- Look up policies and policy posture
+- Ask trust-score and governance questions outside the Trust3 UI
+client_config_example:
+  mcpServers:
+    trust3ai-mcp-server:
+      transport: streamable_http
+      url: https://api.na.trust3ai.com/mcp
+      headers:
+        Accept: application/json, text/event-stream
+        x-trust3ai-key: <api-key>

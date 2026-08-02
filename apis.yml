@@ -1,7 +1,19 @@
 aid: trust3-ai
 name: Trust3 AI
-description: Trust3 AI is a company surfaced as a portfolio company of insight-partners and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Trust3 AI is the agent-first trust layer for the enterprise, founded by the
+  creators of Apache Ranger and Apache Atlas (the team behind Privacera).
+  The platform discovers every AI agent running across platforms like
+  Databricks and Microsoft Copilot Studio, scores each one with a 1.0-10.0
+  Trust Score, evaluates agents against policy packs for NERC CIP, the EU AI
+  Act, FERC, and internal AI governance, and gates new agents through
+  structured approval workflows - with MCP and A2A protocol-layer security and
+  the GIA governance assistant built in. Programmatic access uses scoped API
+  keys: AI Assets Collectors authenticate to the Trust3 API server with a
+  Trust3 API key, and external AI clients connect to the hosted MCP server at
+  api.na.trust3ai.com/mcp with an MCP (read) scoped key. Backed by Insight
+  Partners, Sapphire Ventures, Battery Ventures, Accel, Cervin Ventures, and
+  Point72 Ventures ($63.5M raised).
 url: https://raw.githubusercontent.com/api-evangelist/trust3-ai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +21,55 @@ x-backed-by:
 - insight-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://trust3.ai/wp-content/uploads/2026/05/cropped-T3-mark_indigo-1-192x192.png
 tags:
 - Company
-apis: []
+- Artificial Intelligence
+- AI Governance
+- AI Agents
+- Agent Security
+- MCP Security
+- Data Governance
+- Compliance
+- Observability
+- Access Control
+apis:
+- name: Trust3 AI Governance API
+  description: >-
+    The Trust3 API server is the public AI Governance API edge of the Trust3
+    control plane. AI Assets Collectors running in the customer data plane
+    authenticate every request with a Trust3 API key (AI_GOVERNANCE_API_KEY);
+    the API server validates the key and routes allowed calls to Trust3
+    backend services (inventory, policies, scoring, workflows). The same edge
+    hosts the official Trust3 MCP server at /mcp for external AI clients using
+    MCP (read) scoped keys. No public REST API reference is published yet -
+    the docs site's generic API page is a provider-flagged placeholder.
+  humanURL: https://docs.trust3ai.com/platform-concepts/control-data-plane.html
+  baseURL: https://api.na.trust3ai.com
+  tags:
+  - AI Governance
+  - Agents
+  - MCP
+  properties:
+  - type: Documentation
+    url: https://docs.trust3ai.com/platform-concepts/control-data-plane.html
+  - type: Authentication
+    url: authentication/trust3-ai-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +78,51 @@ maintainers:
 common:
 - type: Website
   url: https://trust3.ai/
+- type: Documentation
+  url: https://docs.trust3ai.com/
+- type: GettingStarted
+  url: https://docs.trust3ai.com/get-started/quick-start.html
+- type: Blog
+  url: https://trust3.ai/blog/
+- type: BlogRSS
+  url: https://trust3.ai/feed/
+- type: Login
+  url: https://na.trust3ai.com/
+- type: TermsOfService
+  url: https://trust3.ai/terms/
+- type: PrivacyPolicy
+  url: https://trust3.ai/privacy-policy/
+- type: FAQ
+  url: https://trust3.ai/faq/
+- type: Support
+  name: Support portal (Privacera Zendesk) - or support@trust3ai.com
+  url: https://privacera.zendesk.com/
+- type: GitHubOrganization
+  url: https://github.com/privacera
+- type: MCPServer
+  url: mcp/trust3-ai-mcp.yml
+- type: Packages
+  url: packages/trust3-ai-packages.yml
+- type: SDKs
+  url: packages/trust3-ai-packages.yml
+- type: Authentication
+  url: authentication/trust3-ai-authentication.yml
+- type: ChangeLog
+  url: changelog/trust3-ai-changelog.yml
+- type: Lifecycle
+  url: lifecycle/trust3-ai-lifecycle.yml
+- type: Conformance
+  url: conformance/trust3-ai-conformance.yml
+- type: Compliance
+  url: https://privacera.com/trust-center/
+- type: TrustCenter
+  url: security/trust3-ai-trust-center.yml
+- type: LLMsTxt
+  url: llms/trust3-ai-llms.txt
+- type: DomainSecurity
+  url: security/trust3-ai-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v1

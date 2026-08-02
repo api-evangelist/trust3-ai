@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.trust3ai.com/
+standards:
+- id: mcp
+  name: Model Context Protocol (streamable HTTP transport)
+  conforms: true
+  evidence: >-
+    Official hosted MCP server at https://api.na.trust3ai.com/mcp using the
+    streamable_http transport, documented at
+    https://docs.trust3ai.com/how-to-guides/mcp-configuration.html (endpoint
+    probed live, 401 without key).
+- id: saml-2.0
+  name: SAML 2.0 single sign-on
+  conforms: true
+  evidence: >-
+    Documented SAML SSO configuration for Azure AD, Okta, OneLogin, Ping
+    Identity, and generic SAML IdPs at
+    https://docs.trust3ai.com/get-started/user-management/sso/.
+- id: soc2-type2
+  name: SOC 2 Type II
+  conforms: true
+  evidence: >-
+    Company trust center (https://privacera.com/trust-center/ - "Privacera is
+    now Trust3 AI by Privacera") states the platform offers SOC 2 Type II
+    attestation.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence: No published OAuth 2.0 authorization surface; programmatic access uses scoped API keys.
+- id: oidc
+  name: OpenID Connect
+  conforms: false
+  evidence: /.well-known/openid-configuration returns 404 on trust3.ai, docs.trust3ai.com, and api.na.trust3ai.com (probed 2026-07-21).
+- id: rfc9457-problem-details
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: No public API error-format documentation; the docs REST API page is a provider-flagged placeholder.

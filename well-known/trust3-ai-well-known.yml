@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+probed: '2026-07-21'
+hosts:
+- host: https://trust3.ai
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://docs.trust3ai.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://na.trust3ai.com
+  documents:
+  - {path: /.well-known/security.txt, status: 302, note: redirects to /loginv1.html}
+  - {path: /.well-known/openid-configuration, status: 302, note: redirects to /loginv1.html}
+  - {path: /.well-known/oauth-authorization-server, status: 302, note: redirects to /loginv1.html}
+  - {path: /.well-known/api-catalog, status: 302, note: redirects to /loginv1.html}
+  - {path: /.well-known/ai-plugin.json, status: 302, note: redirects to /loginv1.html}
+- host: https://api.na.trust3ai.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+notes: No /.well-known/ documents returned 200 on any Trust3 host; nothing saved.
