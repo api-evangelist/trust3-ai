@@ -6,13 +6,14 @@
       "feed_url": "https://docs.trust3ai.com/get-started/quick-start.html",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "none",
+      "error": "parse_failed"
     },
     {
       "source": "https://trust3.ai/blog/feed/",
       "feed_url": "https://trust3.ai/blog/feed/",
       "title": "",
-      "saved": 0,
+      "saved": 1,
       "method": "feed"
     },
     {
@@ -23,6 +24,6 @@
       "method": "discovered"
     }
   ],
-  "post_count": 10,
-  "fetched": "2026-08-06T14:08:46Z"
+  "post_count": 11,
+  "fetched": "2026-08-15T12:11:08Z"
 }
